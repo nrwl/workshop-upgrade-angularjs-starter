@@ -1,0 +1,11 @@
+<header>
+  <span>Companies</span>
+  <a href ng-click="$ctrl.onNotifyAll()">Notify All</a>
+  <span>({{$ctrl.notifyList.length}}) active notifications</span>
+  <a href ng-click="$ctrl.onFilterChange({filter: ''})">Clear Filter</a>
+</header>
+<company-card
+  ng-repeat="tuskCompany in $ctrl.tuskCompanies"
+  tusk-company="tuskCompany"
+  notify-list="$ctrl.notifyList"
+  on-group-select="$ctrl.onGroupSelected(groupName)"></company-card>

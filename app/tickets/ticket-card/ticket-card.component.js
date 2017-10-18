@@ -9,8 +9,7 @@ angular
       notifyList: '=',
       onSubmittedBySelect: '&'
     },
-    controller: ['userService',
-      function TicketCardController(userService) {
+    controller: ['userService', function (userService) {
         this.$onChanges = function () {
           this.userAssignedToCompany = userService.userAssignedToCompany(this.tuskTicket.company);
         };

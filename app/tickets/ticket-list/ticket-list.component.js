@@ -8,8 +8,7 @@ angular
       tuskTickets: '<',
       onFilterChange: '&'
     },
-    controller:
-      function TicketListController() {
+    controller: function () {
         this.notifyList = [];
 
         this.onNotifyAll = function () {

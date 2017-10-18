@@ -2,5 +2,6 @@
 
 angular.module('tuskDeskApp', [
   'ngRoute',
-  'tickets'
+  'tickets',
+  'companies'
 ]);

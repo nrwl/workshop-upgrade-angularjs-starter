@@ -1,0 +1,15 @@
+{
+  "name": "tuskdeskjs",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "license": "MIT",
+  "scripts": {
+    "start": "live-server ./app --host=localhost --port=8000 --quiet"
+  },
+  "devDependencies": {
+    "live-server": "1.2.0",
+    "angular": "1.6.6",
+    "angular-route": "1.6.6"
+  }
+}

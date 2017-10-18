@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en" ng-app="tuskDeskApp">
+<head>
+  <meta charset="utf-8">
+  <title>TuskDesk JS</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular-route.min.js"></script>
+  <script src="app.module.js"></script>
+  <script src="app.config.js"></script>
+  <script src="tickets/tickets.module.js"></script>
+  <script src="tickets/ticket-overview/ticket-overview.component.js"></script>
+  <script src="tickets/ticket-list/ticket-list.component.js"></script>
+  <script src="tickets/ticket-card/ticket-card.component.js"></script>
+  <script src="tickets/user.service.js"></script>
+</head>
+<body>
+
+<div>
+  <div ng-view></div>
+</div>
+
+</body>
+</html>

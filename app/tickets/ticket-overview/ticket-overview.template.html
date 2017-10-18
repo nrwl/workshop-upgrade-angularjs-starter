@@ -1,0 +1,7 @@
+<header>
+  <h1>TuskDesk Ticket System</h1>
+  <span>Hello {{$ctrl.currentUserName}}</span>
+</header>
+<ticket-list
+  tusk-tickets="$ctrl.tickets"
+  on-filter-change="$ctrl.onFilterChanged(filter)"></ticket-list>

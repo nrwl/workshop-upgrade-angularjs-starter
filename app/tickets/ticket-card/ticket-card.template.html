@@ -1,0 +1,11 @@
+<button class="ticket-notify-icon" ng-click="$ctrl.onNotifyToggle()"></button>
+<div><strong>{{$ctrl.tuskTicket.title}}</strong></div>
+<div>
+  Submitted by:
+  <a href ng-click="$ctrl.onSubmittedBySelect({submittedBy: $ctrl.tuskTicket.submittedBy})">{{$ctrl.tuskTicket.submittedBy}}</a>
+</div>
+<p>{{$ctrl.tuskTicket.description}}</p>
+<span>
+  Company: {{$ctrl.tuskTicket.company}}
+  <span ng-if="$ctrl.userAssignedToCompany">*</span>
+</span>

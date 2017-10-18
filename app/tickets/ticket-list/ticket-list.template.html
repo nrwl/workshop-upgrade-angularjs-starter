@@ -1,0 +1,11 @@
+<header>
+  <span>Tickets</span>
+  <a href ng-click="$ctrl.onNotifyAll()">Notify All</a>
+  <span>({{$ctrl.notifyList.length}}) active notifications</span>
+  <a href ng-click="$ctrl.onFilterChange({filter: ''})">Clear Filter</a>
+</header>
+<ticket-card
+  ng-repeat="tuskTicket in $ctrl.tuskTickets"
+  tusk-ticket="tuskTicket"
+  notify-list="$ctrl.notifyList"
+  on-submitted-by-select="$ctrl.onSubmittedBySelected(submittedBy)"></ticket-card>

@@ -1,10 +1,15 @@
-<header>
-  <span>Companies</span>
-  <a href ng-click="$ctrl.onNotifyAll()">Notify All</a>
-  <span>({{$ctrl.notifyList.length}}) active notifications</span>
-  <a href ng-click="$ctrl.onFilterChange({filter: ''})">Clear Filter</a>
+<header class="list-header">
+  <div>
+    <div class="list-title">Companies</div>
+    <a href ng-click="$ctrl.onFilterChange({filter: ''})">Clear Filter</a>
+  </div>
+  <div class="notification-summary">
+    <div>({{$ctrl.notifyList.length}}) active notifications</div>
+    <a href ng-click="$ctrl.onNotifyAll()">Notify All</a>
+  </div>
 </header>
 <company-card
+  class="card"
   ng-repeat="tuskCompany in $ctrl.tuskCompanies"
   tusk-company="tuskCompany"
   notify-list="$ctrl.notifyList"

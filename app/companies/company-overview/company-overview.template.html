@@ -1,8 +1,5 @@
-<header>
-  <h1>TuskDesk Ticket System</h1>
-  <span>Hello Team {{$ctrl.currentTeamName}}</span>
-  <a href="#!/tickets">View Tickets</a>
-</header>
+<p class="overview-message">Companies managed by team {{$ctrl.currentTeamName}}</p>
 <company-list
+  class="list"
   tusk-companies="$ctrl.companies"
   on-filter-change="$ctrl.onFilterChanged(filter)"></company-list>

@@ -3,7 +3,7 @@
 angular
   .module('companies')
   .component('companyOverview', {
-    templateUrl: 'companies/company-overview/company-overview.template.html',
+    templateUrl: 'assets/companies/company-overview/company-overview.template.html',
     controller: ['teamService', function (teamService) {
       this.currentTeamName = teamService.currentTeam();
 

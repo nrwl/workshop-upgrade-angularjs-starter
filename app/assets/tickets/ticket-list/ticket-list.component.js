@@ -3,7 +3,7 @@
 angular
   .module('tickets')
   .component('ticketList', {
-    templateUrl: 'tickets/ticket-list/ticket-list.template.html',
+    templateUrl: 'assets/tickets/ticket-list/ticket-list.template.html',
     bindings: {
       tuskTickets: '<',
       onFilterChange: '&'

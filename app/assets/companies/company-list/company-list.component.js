@@ -3,7 +3,7 @@
 angular
   .module('companies')
   .component('companyList', {
-    templateUrl: 'companies/company-list/company-list.template.html',
+    templateUrl: 'assets/companies/company-list/company-list.template.html',
     bindings: {
       tuskCompanies: '<',
       onFilterChange: '&'

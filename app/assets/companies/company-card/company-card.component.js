@@ -3,7 +3,7 @@
 angular
   .module('companies')
   .component('companyCard', {
-    templateUrl: 'companies/company-card/company-card.template.html',
+    templateUrl: 'assets/companies/company-card/company-card.template.html',
     bindings: {
       tuskCompany: '<',
       notifyList: '=',

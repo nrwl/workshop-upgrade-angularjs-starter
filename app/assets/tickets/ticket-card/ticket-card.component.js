@@ -3,7 +3,7 @@
 angular
   .module('tickets')
   .component('ticketCard', {
-    templateUrl: 'tickets/ticket-card/ticket-card.template.html',
+    templateUrl: 'assets/tickets/ticket-card/ticket-card.template.html',
     bindings: {
       tuskTicket: '<',
       notifyList: '=',

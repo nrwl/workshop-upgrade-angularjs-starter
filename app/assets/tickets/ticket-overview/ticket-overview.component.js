@@ -3,7 +3,7 @@
 angular
   .module('tickets')
   .component('ticketOverview', {
-    templateUrl: 'tickets/ticket-overview/ticket-overview.template.html',
+    templateUrl: 'assets/tickets/ticket-overview/ticket-overview.template.html',
     controller: ['userService', function (userService) {
         this.currentUserName = userService.currentUser();
         this._companies = [

@@ -7,7 +7,7 @@ angular
       <header class="list-header">
         <div>
           <div class="list-title">Tickets</div>
-          <a ng-click="$ctrl.onFilterChange({filter: ''})">Clear Filter</a>
+          <a ng-click="$ctrl.onFilterChange({filter: ''})">Clear Submitted By Filter</a>
         </div>
         <div class="notification-summary">
           <div>({{$ctrl.notifyList.length}}) active notifications</div>

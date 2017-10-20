@@ -10,6 +10,7 @@ angular
           Group:
           <a ng-click="$ctrl.onGroupSelect({groupName: $ctrl.tuskCompany.group})">{{$ctrl.tuskCompany.group}}</a>
         </div>
+        <company-activity tusk-company="$ctrl.tuskCompany"></company-activity>
       </section>
       <button
         class="notify-icon"

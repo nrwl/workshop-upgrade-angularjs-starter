@@ -90,3 +90,15 @@ a {
     background: #f4d399;
     color: #333333;
 }
+
+.activity-link:before {
+    content: 'Show '
+}
+.activity-link.open:before {
+    content: 'Hide '
+}
+.entry {
+    margin: 0;
+    color: #bbb;
+    font-style: italic;
+}

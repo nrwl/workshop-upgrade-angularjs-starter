@@ -14,6 +14,7 @@ angular
           Company: {{$ctrl.tuskTicket.company}}
           <span ng-if="$ctrl.userAssignedToCompany">*</span>
         </div>
+        <ticket-activity tusk-ticket="$ctrl.tuskTicket"></ticket-activity>
       </section>
       <button
         class="notify-icon"

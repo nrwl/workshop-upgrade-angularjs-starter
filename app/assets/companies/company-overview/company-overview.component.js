@@ -3,7 +3,13 @@
 angular
   .module('companies')
   .component('companyOverview', {
-    templateUrl: 'assets/companies/company-overview/company-overview.template.html',
+    template: `
+      <p class="overview-message">Companies managed by team {{$ctrl.currentTeamName}}</p>
+      <company-list
+        class="list"
+        tusk-companies="$ctrl.companies"
+        on-filter-change="$ctrl.onFilterChanged(filter)"></company-list>
+    `,
     controller: ['teamService', function (teamService) {
       this.currentTeamName = teamService.currentTeam();
 

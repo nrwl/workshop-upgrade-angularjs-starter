@@ -3,7 +3,21 @@
 angular
   .module('companies')
   .component('companyCard', {
-    templateUrl: 'assets/companies/company-card/company-card.template.html',
+    template: `
+      <section>
+        <div><strong>{{$ctrl.tuskCompany.name}}</strong></div>
+        <div>
+          Group:
+          <a ng-click="$ctrl.onGroupSelect({groupName: $ctrl.tuskCompany.group})">{{$ctrl.tuskCompany.group}}</a>
+        </div>
+      </section>
+      <button
+        class="notify-icon"
+        ng-class="{on: $ctrl.notifyList.indexOf($ctrl.tuskCompany.id) >= 0}"
+        ng-click="$ctrl.onNotifyToggle()">
+        N
+      </button>
+    `,
     bindings: {
       tuskCompany: '<',
       notifyList: '=',

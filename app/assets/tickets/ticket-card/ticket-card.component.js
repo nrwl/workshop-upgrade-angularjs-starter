@@ -3,7 +3,25 @@
 angular
   .module('tickets')
   .component('ticketCard', {
-    templateUrl: 'assets/tickets/ticket-card/ticket-card.template.html',
+    template: `
+      <section>
+        <div><strong>{{$ctrl.tuskTicket.title}}</strong></div>
+        <div>
+          Submitted by:
+          <a ng-click="$ctrl.onSubmittedBySelect({submittedBy: $ctrl.tuskTicket.submittedBy})">{{$ctrl.tuskTicket.submittedBy}}</a>
+        </div>
+        <div>
+          Company: {{$ctrl.tuskTicket.company}}
+          <span ng-if="$ctrl.userAssignedToCompany">*</span>
+        </div>
+      </section>
+      <button
+        class="notify-icon"
+        ng-class="{on: $ctrl.notifyList.indexOf($ctrl.tuskTicket.id) >= 0}"
+        ng-click="$ctrl.onNotifyToggle()">
+        N
+      </button>
+    `,
     bindings: {
       tuskTicket: '<',
       notifyList: '=',

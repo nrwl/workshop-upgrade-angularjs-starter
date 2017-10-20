@@ -3,7 +3,24 @@
 angular
   .module('tickets')
   .component('ticketList', {
-    templateUrl: 'assets/tickets/ticket-list/ticket-list.template.html',
+    template: `
+      <header class="list-header">
+        <div>
+          <div class="list-title">Tickets</div>
+          <a ng-click="$ctrl.onFilterChange({filter: ''})">Clear Filter</a>
+        </div>
+        <div class="notification-summary">
+          <div>({{$ctrl.notifyList.length}}) active notifications</div>
+          <a ng-click="$ctrl.onNotifyAll()">Notify All</a>
+        </div>
+      </header>
+      <ticket-card
+        class="card"
+        ng-repeat="tuskTicket in $ctrl.tuskTickets"
+        tusk-ticket="tuskTicket"
+        notify-list="$ctrl.notifyList"
+        on-submitted-by-select="$ctrl.onSubmittedBySelected(submittedBy)"></ticket-card>
+    `,
     bindings: {
       tuskTickets: '<',
       onFilterChange: '&'

@@ -3,7 +3,24 @@
 angular
   .module('companies')
   .component('companyList', {
-    templateUrl: 'assets/companies/company-list/company-list.template.html',
+    template: `
+      <header class="list-header">
+        <div>
+          <div class="list-title">Companies</div>
+          <a ng-click="$ctrl.onFilterChange({filter: ''})">Clear Filter</a>
+        </div>
+        <div class="notification-summary">
+          <div>({{$ctrl.notifyList.length}}) active notifications</div>
+          <a ng-click="$ctrl.onNotifyAll()">Notify All</a>
+        </div>
+      </header>
+      <company-card
+        class="card"
+        ng-repeat="tuskCompany in $ctrl.tuskCompanies"
+        tusk-company="tuskCompany"
+        notify-list="$ctrl.notifyList"
+        on-group-select="$ctrl.onGroupSelected(groupName)"></company-card>
+    `,
     bindings: {
       tuskCompanies: '<',
       onFilterChange: '&'

@@ -8,7 +8,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular-route.min.js"></script>
   <script src="assets/app.module.js"></script>
   <script src="assets/app.config.js"></script>
-  <script src="assets/site-header.component.js"></script>
   <script src="assets/tickets/tickets.module.js"></script>
   <script src="assets/tickets/ticket-overview/ticket-overview.component.js"></script>
   <script src="assets/tickets/ticket-list/ticket-list.component.js"></script>
@@ -27,7 +26,13 @@
 </head>
 <body>
 
-<site-header></site-header>
+<header class="site-header">
+  <h1>TuskDesk Ticket System</h1>
+  <nav>
+    <a href="/tickets">Tickets</a>
+    <a href="/companies">Companies</a>
+  </nav>
+</header>
 <div class="content">
   <div ng-view></div>
 </div>

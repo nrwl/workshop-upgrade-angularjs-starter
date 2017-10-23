@@ -1,7 +1,7 @@
 'use strict';
 
 angular
-  .module('tuskDeskApp')
+  .module('tusk-desk-app')
   .config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
       $routeProvider
         .when('/tickets', {

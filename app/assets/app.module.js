@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('tuskDeskApp', [
+angular.module('tusk-desk-app', [
   'ngRoute',
   'tickets',
   'companies'

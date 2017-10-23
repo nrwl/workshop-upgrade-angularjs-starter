@@ -5,7 +5,7 @@
   "description": "",
   "license": "MIT",
   "scripts": {
-    "start": "live-server ./app --host=localhost --port=8000 --quiet"
+    "start": "live-server ./app --host=localhost --port=8000 --entry-file=index.html --quiet"
   },
   "devDependencies": {
     "live-server": "1.2.0",

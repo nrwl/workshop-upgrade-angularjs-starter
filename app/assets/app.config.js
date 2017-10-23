@@ -2,7 +2,7 @@
 
 angular
   .module('tuskDeskApp')
-  .config(['$routeProvider', function ($routeProvider) {
+  .config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
       $routeProvider
         .when('/tickets', {
           template: '<ticket-overview></ticket-overview>'
@@ -11,5 +11,6 @@ angular
           template: '<company-overview></company-overview>'
         })
         .otherwise('/tickets');
+      $locationProvider.html5Mode(true);
     }
   ]);
